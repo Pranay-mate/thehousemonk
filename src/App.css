@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.form-label{
+  font-weight: bold!important;
+}
+.vl {
+  border-left: 2px solid grey;
+  height: 25px;
+}
+hr{margin: 2px;}
