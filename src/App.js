@@ -12,7 +12,7 @@ function App() {
           <Route  exact path='/'
               element={<ReceipeList></ReceipeList>}>
           </Route>
-          <Route path="/recipeDetails/:recipeId" 
+          <Route exact path="/recipeDetails/:recipeId" 
               element={<RecipeDetails></RecipeDetails>}>
           </Route>
         </Routes>

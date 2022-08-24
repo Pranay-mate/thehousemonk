@@ -103,7 +103,9 @@ function ReceipeList() {
       setModalShow(true)
     }
     const openRecipeDetails = (recipeId) =>{
-      window.open("thehousemonk/recipeDetails/"+recipeId, "_blank");
+      console.log(process.env.NODE_ENV)
+      const pathPrefix = process.env.NODE_ENV === 'development'? '': '/thehousemonk';
+      window.open(`${pathPrefix}/recipeDetails/`+recipeId, "_blank");
       console.log(recipeId)
     }
   return (
