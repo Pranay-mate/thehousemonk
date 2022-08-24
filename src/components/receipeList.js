@@ -103,7 +103,7 @@ function ReceipeList() {
       setModalShow(true)
     }
     const openRecipeDetails = (recipeId) =>{
-      window.open("/recipeDetails/"+recipeId, "_blank");
+      window.open("thehousemonk/recipeDetails/"+recipeId, "_blank");
       console.log(recipeId)
     }
   return (

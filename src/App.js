@@ -7,9 +7,9 @@ import RecipeDetails from './components/recipeDetails';
 function App() {
   return (
     <div className="App">
-     <Router>
+     <Router basename={process.env.PUBLIC_URL}>
         <Routes>
-          <Route exact path="/" 
+          <Route  exact path='/'
               element={<ReceipeList></ReceipeList>}>
           </Route>
           <Route path="/recipeDetails/:recipeId" 
