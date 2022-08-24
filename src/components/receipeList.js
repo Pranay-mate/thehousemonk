@@ -104,8 +104,9 @@ function ReceipeList() {
     }
     const openRecipeDetails = (recipeId) =>{
       console.log(process.env.NODE_ENV)
-      const pathPrefix = process.env.NODE_ENV === 'development'? '': '/thehousemonk';
+      const pathPrefix = '#/thehousemonk';
       window.open(`${pathPrefix}/recipeDetails/`+recipeId, "_blank");
+      console.log(pathPrefix)
       console.log(recipeId)
     }
   return (
