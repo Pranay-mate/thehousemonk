@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/thehousemonk/static/css/main.c517417c.css",
-    "main.js": "/thehousemonk/static/js/main.73bd182a.js",
+    "main.js": "/thehousemonk/static/js/main.9946e13a.js",
     "static/js/787.e7866b0c.chunk.js": "/thehousemonk/static/js/787.e7866b0c.chunk.js",
     "static/media/logo.svg": "/thehousemonk/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/thehousemonk/index.html",
     "main.c517417c.css.map": "/thehousemonk/static/css/main.c517417c.css.map",
-    "main.73bd182a.js.map": "/thehousemonk/static/js/main.73bd182a.js.map",
+    "main.9946e13a.js.map": "/thehousemonk/static/js/main.9946e13a.js.map",
     "787.e7866b0c.chunk.js.map": "/thehousemonk/static/js/787.e7866b0c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c517417c.css",
-    "static/js/main.73bd182a.js"
+    "static/js/main.9946e13a.js"
   ]
 }
