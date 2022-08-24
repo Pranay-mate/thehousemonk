@@ -45,3 +45,23 @@
   height: 25px;
 }
 hr{margin: 2px;}
+
+a {
+  color: #1a1c1f;
+  text-decoration: none;
+}
+.card_recipe{
+  cursor: pointer;
+}
+
+li {
+  display: inline-block;
+  font-size: 12px;
+  /* text-align: left;  */
+}
+ul{
+  text-align: center;
+  list-style-position: inside;
+  position: relative;
+  top: 1em;
+}

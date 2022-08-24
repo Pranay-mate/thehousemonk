@@ -12,6 +12,7 @@ import InputGroup from 'react-bootstrap/InputGroup';
 
 import { Bars } from  'react-loader-spinner'
 
+
 function ReceipeList() {
   const [recipeList, setRecipeList] = useState([]);
   const [searchRecipe, setsearchRecipe] = useState('chicken');
@@ -101,6 +102,10 @@ function ReceipeList() {
       setSpinnerLoading(false)
       setModalShow(true)
     }
+    const openRecipeDetails = (recipeId) =>{
+      window.open("/recipeDetails/"+recipeId, "_blank");
+      console.log(recipeId)
+    }
   return (
     <>
     <Container>
@@ -114,7 +119,7 @@ function ReceipeList() {
         <Row xs={1} md={3} className="g-4">
             {!spinnerLoading && recipeList.length>0?recipeList.map((recipeData,id)=>(
                 <Col>
-                    <Card>
+                    <Card className='card_recipe' onClick={()=> openRecipeDetails(recipeData.recipe.uri.split('#recipe_').pop())}>
                         <Card.Img variant="top" src={recipeData.recipe.image} />
                         <Card.Body className=''>
                         <Card.Title>{recipeData.recipe.label}</Card.Title>
@@ -122,17 +127,17 @@ function ReceipeList() {
                           <hr></hr>
                           <Row className='mt-2'>
                             <Col xs={6} className="my-1 pt-2">
-                              INGREDIENTS: <span style={{"color":"mediumseagreen"}}>{recipeData.recipe.ingredients.length}</span>
+                               <span style={{"color":"mediumseagreen"}}>{recipeData.recipe.ingredients.length}</span> INGREDIENTS
                             </Col>
                             <Col>
                               <p className="vl" style={{'marginTop':"12px"}}></p>
                             </Col>
                             <Col xs={5} className="my-1 pt-2">
-                              CALORIES: <span style={{"color":"mediumseagreen"}}>{parseInt(recipeData.recipe.calories)}</span>
+                               <span style={{"color":"mediumseagreen"}}>{parseInt(recipeData.recipe.calories/recipeData.recipe.yield)}</span> CALORIES
                             </Col>
                           </Row>
                             <hr></hr>
-                            <Row className='m-1' style={{'fontWeight':"600","color":"darkgrey"}}>{recipeData.recipe.source}</Row>
+                            <Row className='m-1 mt-2' style={{'fontWeight':"600","color":"darkgrey"}}>{recipeData.recipe.source}</Row>
                           
                         </Card.Text>
                         </Card.Body>
